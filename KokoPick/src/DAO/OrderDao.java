@@ -77,9 +77,6 @@ public class OrderDAO {
 	
 	//주문하기
 	public boolean order(String menu, int price, int deliveryFlag, int deliveryFee, int brandId, int userId) {
-		//로그인 시스템이 갖춰지지 않았으므로 userId를 임의로 0으로 설정
-		
-		
 		//Order(orderId,menu,price,deliveryFlag,deliveryFee,brandId,userId);
 		//orderId값은 sequence 이용하여 추가
 		String sql = "INSERT INTO Orders VALUES (ORDERID_SEQUENCE.NEXTVAL, ?, ?, ?, ?, ?, ?)";
